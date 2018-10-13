@@ -1,4 +1,6 @@
-function getSiblings(node) {/*API*/
+window.zlcdom = {}
+
+zlcdom.getSiblings=function(node) {/*API*/
     var allChildren = node.parentNode.children
     var array = {
         length: 0
@@ -18,11 +20,11 @@ function getSiblings(node) {/*API*/
 
 
 
-function addClass(node,classes) {
+zlcdom.addClass = function (node,classes) {
     classes.forEach((value)=>node.classList.add(value))
 }
 
-window.zlcdom = {}
+
 zlcdom.getSiblings = getSiblings
 zlcdom.addClass = addClass
 zlcdom.getSiblings(items)
